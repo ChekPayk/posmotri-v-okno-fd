@@ -69,7 +69,7 @@ ol {
   grid-area: result;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
 
 .result__video-container {
@@ -79,7 +79,8 @@ ol {
 }
 
 .result__video {
-  width: inherit;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -95,7 +96,6 @@ ol {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 16px;
   box-sizing: border-box;
 }
 
@@ -113,7 +113,6 @@ ol {
   letter-spacing: 0%;
   display: -webkit-box;
   line-clamp: 3;
-  margin: 8px 0;
 }
 
 .content__video-card-description-container {
@@ -123,13 +122,14 @@ ol {
 .search-form {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  padding-top: 10px;
+  align-items: end;
   justify-content: space-between;
 }
 
 .search-form__fieldset {
   border: none;
+  min-width: 225px;
+  align-self: flex-start;
 }
 
 .search-form__fieldset-title {
@@ -142,7 +142,6 @@ ol {
 .search-form__label {
   display: flex;
   align-items: center;
-  width: fit-content;
   gap: 5px;
 }
 
@@ -199,18 +198,21 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  display: flex;
+  display: inline-block;
   width: 19px;
   height: 19px;
   border: 1px solid white;
   position: relative;
-  justify-content: center;
-  align-items: center;
+  cursor: pointer; 
 }
 
 .search-form__pseudo-checkbox::after {
   content: "";
-  width: 15x;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
   height: 15px;
   background-color: white;
   display: none;
@@ -241,13 +243,13 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
 .more-button {
   width: calc(100% - 10px);
   margin: 5px;
+  margin-top: 30px;
 }
 
 .content__details {
   grid-area: details;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   width: 100%;
   height: 100%;
 }
@@ -255,10 +257,11 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
 .title {
   font-weight: 700;
   font-size: 75px;
-  line-height: 94%;
+  line-height: 88%;
   letter-spacing: 0%;
   text-transform: uppercase;
   font-family: Oswald;
+  margin-bottom: 26px;
 }
 
 .content__accent {
@@ -281,7 +284,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 5px;
+  padding: 3px;
 }
 .content__video-card-title {
   font-weight: 700;
