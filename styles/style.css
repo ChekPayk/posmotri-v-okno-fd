@@ -57,7 +57,6 @@ ol {
 .content {
   display: grid;
   grid-template-columns: 711px 400px;
-  grid-template-rows: auto 1fr;
   grid-template-areas: "result details";
   gap: 30px;
   width: 1140px;
@@ -126,7 +125,6 @@ ol {
 }
 
 .search-form > *:nth-child(2) {
-  padding-top: 3px;
   padding-left: 5px;
 }
 
@@ -141,12 +139,13 @@ ol {
   font-size: 18px;
   line-height: 100%;
   margin-bottom: 5px;
+  margin-top: 3px;
 }
 
 .search-form__label {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
 }
 
 .search-form__textfield:focus {
@@ -158,9 +157,9 @@ ol {
 .content__card-link:hover,
 .content__video-card-title:hover {
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-offset: 0%;
+  text-decoration-thickness:  0%;
   cursor: pointer;
-  text-decoration-thickness: 1.5px;
   text-decoration-skip-ink: none;
 }
 
@@ -194,7 +193,6 @@ ol {
   border-right: none;
   appearance: none;
   font-family: 'Fira Sans Condensed', sans-serif;
-  margin-top: 3px;
 }
 
 .search-form__checkbox-list {
@@ -264,7 +262,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox::after {
 .title {
   font-weight: 700;
   font-size: 75px;
-  line-height: 88%;
+  line-height: 94%;
   letter-spacing: 0%;
   text-transform: uppercase;
   font-family: 'Oswald', sans-serif;
